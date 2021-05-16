@@ -4,7 +4,6 @@ interface CssExports {
   'full': string;
   'root': string;
   'small': string;
-  'yellow': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
