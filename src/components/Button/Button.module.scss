@@ -22,19 +22,19 @@
       box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.18);
       padding-bottom: 6px;
     }
-  }
+}
   
-  .full {
+.full {
     width: 100%;
-  }
+}
   
-  .yellow {
-    background: #f2cb07;
-  }
-  
-  .small {
+.small {
     width: 140px;
     height: 40px;
     font-size: 17px;
     line-height: 20px;
-  }
+    span{
+        font-size: 13px;
+        line-height: 17px;
+    }
+}
