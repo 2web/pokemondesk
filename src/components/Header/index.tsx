@@ -1,4 +1,7 @@
 import React from 'react';
+import cn from 'classnames';
+import { A, usePath } from 'hookrouter';
+import { GENERAL_MENU } from '../../routes';
 
 import s from './Header.module.scss';
 
@@ -10,47 +13,29 @@ interface IMenu {
   link: string;
 }
 
-const MENU: Array<IMenu> = [
-  {
-    id: 1,
-    value: 'Home',
-    link: '#',
-  },
-  {
-    id: 2,
-    value: 'Pokédex',
-    link: '#',
-  },
-  {
-    id: 3,
-    value: 'Legendaries',
-    link: '#',
-  },
-  {
-    id: 4,
-    value: 'Documentation',
-    link: '#',
-  },
-];
-
 const Header = () => {
-  return (
-    <div className={s.root}>
-      <div className={s.wrap}>
-        <div className={s.pokemonLogo}>
-          <PokemonLogo />
+  const path = usePath();
+    return (
+        <div className={s.root}>
+            <div className={s.wrap}>
+                <div className={s.pokemonLogo}>
+                    <PokemonLogo />
+                </div>
+            </div>
+            <div className={s.menuWrap}>
+                {GENERAL_MENU.map(({ title, link }) => (
+                    <A
+                        key={title}
+                        href={link}
+                        className={cn(s.menuLink, {
+                            [s.activeLink]: link === path,
+                        })}>
+                        {title}
+                    </A>
+                ))}
+            </div>
         </div>
-
-        <div className={s.menuWrap}>
-          {MENU.map(({ value, link, id }) => (
-            <a key={id} className={s.menuLink} href={link}>
-              {value}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Header;

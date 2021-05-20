@@ -1,0 +1,26 @@
+@import '../../variables';
+
+.root {
+    min-height: 100%;
+}
+
+.contentWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.contentText {
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+        margin-bottom: 15px;
+    }
+}
+.contentGallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
