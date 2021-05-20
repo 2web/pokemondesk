@@ -14,13 +14,13 @@ const HomePage = () => {
       <Header />
       <Layout className={s.contentWrap}>
         <div className={s.contentText}>
-          <Heading size="72px">
+          <Heading tag="h1">
             <b>Find</b> all your favorite <b>Pokemon</b>
           </Heading>
-          <Heading size="36px">You can know the type of Pokemon, its strengths, disadvantages and abilities</Heading>
+          <Heading tag="h3">You can know the type of Pokemon, its strengths, disadvantages and abilities</Heading>
           <Button onClick={() => console.log('Click!')} color="yellow" >See pokemons</Button>
           <br/>
-          <Button onClick={() => console.log('Click!')} small >Read more</Button>
+          <Button onClick={() => console.log('Click!')} size="small" >Read more</Button>
         </div>
         <div className={s.contentParallax}>
           <Parallax />

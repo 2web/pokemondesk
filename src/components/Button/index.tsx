@@ -2,19 +2,17 @@ import React, { FC, MouseEvent } from 'react';
 import cn from 'classnames';
 
 import s from './Button.module.scss';
-import './Button.scss';
 
 interface IProps {
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
-  fullWidth?: boolean;
-  color?: string;
-  small?: boolean;
+  color?: 'green' | 'yellow';
+  size?: 'small' | 'wide';
 }
 
-const Button: FC<IProps> = ({ children, onClick, fullWidth = false, color = '', small = false }) => {
+const Button: FC<IProps> = ({ children, onClick, color, size }) => {
   return (
     <button
-      className={cn(s.root, fullWidth ? s.full : null, color , small ? s.small : null)}
+      className={cn(s.root, s[size as keyof typeof s], s[color as keyof typeof s])}
       type="button"
       onClick={onClick}>
       <span>
