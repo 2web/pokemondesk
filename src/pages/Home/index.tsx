@@ -3,7 +3,6 @@ import { navigate } from 'hookrouter';
 import { LinkEnum } from '../../routes';
 
 
-import Header from '../../components/Header/index';
 import Layout from '../../components/Layout/index';
 import Button from '../../components/Button/index';
 import Parallax from '../../components/Parallax/index';
@@ -14,7 +13,6 @@ import s from './Home.module.scss';
 const HomePage = () => {
   return (
     <div className={s.root}>
-      <Header />
       <Layout className={s.contentWrap}>
         <div className={s.contentText}>
           <Heading tag="h1">

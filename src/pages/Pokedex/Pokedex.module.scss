@@ -1,7 +1,8 @@
 @import '../../variables';
 
 .root {
-    min-height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ffffff 30.32%, #f5f5f5 100%);
 }
 
 .contentWrap {

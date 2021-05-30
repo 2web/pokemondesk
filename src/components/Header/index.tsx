@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import cn from 'classnames';
 import { A, usePath } from 'hookrouter';
 import { GENERAL_MENU } from '../../routes';
@@ -7,11 +7,11 @@ import s from './Header.module.scss';
 
 import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
 
-interface IMenu {
-  id: number;
-  value: string;
-  link: string;
-}
+// interface IMenu {
+//   id: number;
+//   value: string;
+//   link: string;
+// }
 
 const Header = () => {
   const path = usePath();
@@ -38,4 +38,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default memo(Header);
