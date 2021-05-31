@@ -2,7 +2,8 @@
 
 .root {
   flex: 2 1 auto;
-
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,7 @@
 .pokemonCard {
   display: flex;
   width: 800px;
-  height: 370px;
+  height: 440px;
   border-radius: 16px;
   overflow: hidden;
 }

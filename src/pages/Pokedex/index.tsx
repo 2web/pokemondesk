@@ -4,9 +4,9 @@ import { A } from 'hookrouter';
 
 import s from './Pokedex.module.scss';
 
-import PokemonCard from '../../components/PokemonCard';
-import Heading from '../../components/Heading';
-import Loader from '../../components/Loader';
+import PokemonCard from '../../components/PokemonCard/index';
+import Heading from '../../components/Heading/index';
+import Loader from '../../components/Loader/index';
 
 import useDebounce from '../../hooks/useDebounce';
 import useData from '../../hooks/useData';
@@ -35,42 +35,41 @@ const Pokedex = () => {
   if (isError) return <div>Something wrong...</div>;
 
   return (
-      <div className={s.root}>
-        <div className={s.wrapper}>
-          <Heading level="h3">
-            {!isLoading && data && data.total} <b>Pokemons</b> for you to choose your favorite
-          </Heading>
-          <input
-            className={s.pokemonInput}
-            placeholder="Choose pokemon"
-            type="text"
-            value={searchValue}
-            onChange={handleSearchChange}
-          />
-          <ul className={s.pokemonCards}>
-            {isLoading ? (
-              <Loader />
-            ) : (
-              data &&
-              data.pokemons.map((pokemon: PokemonRequest) => {
-                const { id, name_clean, stats, types, img } = pokemon;
-                return (
-                  <A className={s.polemonLink} key={id} href={`/pokemon/${id}`}>
-                    <PokemonCard
-                      key={id}
-                      name={name_clean}
-                      attack={stats.attack}
-                      defense={stats.defense}
-                      types={types}
-                      img={img}
-                    />
-                  </A>
-                );
-              })
-            )}
-          </ul>
-        </div>
+    <div className={s.root}>
+      <div className={s.wrapper}>
+        <Heading level="h3">
+          {!isLoading && data && data.total} <b>Pokemons</b> for you to choose your favorite
+        </Heading>
+        <input
+          className={s.pokemonInput}
+          placeholder="Choose pokemon"
+          type="text"
+          value={searchValue}
+          onChange={handleSearchChange}
+        />
+        <ul className={s.pokemonCards}>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            data &&
+            data.pokemons.map((pokemon: PokemonRequest) => {
+              const { id, name_clean, stats, types, img } = pokemon;
+              return (
+                <A className={s.polemonLink} key={id} href={`/pokemon/${id}`}>
+                  <PokemonCard
+                    name={name_clean}
+                    attack={stats.attack}
+                    defense={stats.defense}
+                    types={types}
+                    img={img}
+                  />
+                </A>
+              );
+            })
+          )}
+        </ul>
       </div>
+    </div>
   );
 };
 

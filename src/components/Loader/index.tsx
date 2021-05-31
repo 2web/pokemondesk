@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './style.module.scss';
+import s from './Loader.module.scss';
 
 import { ReactComponent as PokeballSpinner } from './assets/PokeballSpinner.svg';
 

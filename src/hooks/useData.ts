@@ -5,7 +5,13 @@ import config from '../config/index';
 
 type TEndpoint = keyof typeof config.client.endpoint;
 
-const useData = <T>(endpoint: TEndpoint, query: object, deps: Array<any> = []) => {
+type TData<T> = {
+  isLoading: boolean;
+  isError: boolean;
+  data: T | null;
+};
+
+const useData = <T>(endpoint: TEndpoint, query: object, deps: Array<any> = []): TData<T> => {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsloading] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
