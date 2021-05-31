@@ -6,11 +6,11 @@ import config from '../config/index';
 
 type TEndpoint = keyof typeof config.client.endpoint;
 
-const req = async (endpoint: TEndpoint) => {
-  const uri = Url.format(getUrlWithParamsConfig(endpoint));
+async function req<T>(endpoint: TEndpoint, query: object): Promise<T> {
+  const uri = Url.format(getUrlWithParamsConfig(endpoint, query));
   const result = await fetch(uri).then((response) => response.json());
 
   return result;
-};
+}
 
 export default req;

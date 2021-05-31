@@ -4,7 +4,7 @@ interface CssExports {
   'activeLink': string;
   'menuLink': string;
   'menuWrap': string;
-  'pokemonLogo': string;
+  'pockemonLogo': string;
   'root': string;
   'wrap': string;
 }

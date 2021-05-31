@@ -1,12 +1,12 @@
-@import "../../variables";
+@import '../../variables';
 
 .root {
-    height: 93px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5db13;
-    box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
+  height: 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, $third 0%, $primary 100%);
+  // box-shadow: 0 0 0 transparent, 8px 8px 15px rgb(0 0 0 / 18%);
 }
 
 .wrap {
@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-.pokemonLogo {
+.pockemonLogo {
   width: 158px;
   height: 63px;
 }
@@ -32,6 +32,7 @@
 }
 
 .menuLink {
+  // font-family: Karla;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -41,11 +42,10 @@
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     bottom: -8px;
-    height: 1px;
     width: 1%;
     background: $dark;
     border: 1px solid $dark;
@@ -53,14 +53,20 @@
     opacity: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    transition: opacity, width ease-in-out .25s;
+    transition: opacity, width ease-in-out 0.25s;
   }
 
-  &:hover,
-  &.activeLink {
+  &:hover {
     &:after {
       width: 100%;
       opacity: 1;
     }
+  }
+}
+
+.activeLink {
+  &::after {
+    width: 100%;
+    opacity: 1;
   }
 }
