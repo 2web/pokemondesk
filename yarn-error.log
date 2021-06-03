@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D identify-obj-proxy
+  C:\Program Files\nodejs\node.exe C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @hapi/hapi
 
 PATH: 
   C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Андрей\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\dotnet;C:\Program Files (x86)\Tesseract-OCR;C:\Users\Андрей\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Андрей\.nvmw;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\QuickTime\QTSystem;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Андрей\AppData\Local\atom\bin;C:\Users\Андрей\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Андрей\AppData\Roaming\npm;C:\Users\Андрей\.dotnet\tools;C:\Users\Андрей\AppData\Local\Programs\Microsoft VS Code\bin
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/identify-obj-proxy: Not found
-      at Request.params.callback [as _callback] (C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
-      at Request.self.callback (C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1220:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: EPERM: operation not permitted, unlink 'E:\Projects\pokedesk\node_modules\.bin\webpack'
 
 npm manifest: 
   {
@@ -71,6 +61,7 @@ npm manifest:
       "hookrouter": "1.2.3",
       "html-webpack-plugin": "^5.3.1",
       "husky": "^6.0.0",
+      "identity-obj-proxy": "^3.0.0",
       "jest": "^27.0.3",
       "lint-staged": "^11.0.0",
       "node-sass": "^6.0.0",
@@ -4606,6 +4597,11 @@ Lockfile:
       ajv "^6.12.3"
       har-schema "^2.0.0"
   
+  harmony-reflect@^1.4.6:
+    version "1.6.2"
+    resolved "https://registry.yarnpkg.com/harmony-reflect/-/harmony-reflect-1.6.2.tgz#31ecbd32e648a34d030d86adb67d4d47547fe710"
+    integrity sha512-HIp/n38R9kQjDEziXyDTuW3vvoxxyxjxFzXLrBr18uB47GnSt+G9D29fqrpM5ZkspMcPICud3XsBJQ4Y2URg8g==
+  
   has-ansi@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
@@ -4898,6 +4894,13 @@ Lockfile:
     version "5.1.0"
     resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-5.1.0.tgz#c6be6858abd013d768e98366ae47e25d5887b1ae"
     integrity sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==
+  
+  identity-obj-proxy@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
+    integrity sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ=
+    dependencies:
+      harmony-reflect "^1.4.6"
   
   ieee754@^1.1.4:
     version "1.2.1"
