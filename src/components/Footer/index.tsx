@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import React from 'react';
 import Heading from '../Heading';
 import s from './Footer.module.scss';
