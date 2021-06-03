@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <div className={s.root}>
       <div className={s.wrapContent}>
-        <Heading level="h4">
+        <Heading size="s">
           Made with{' '}
           <span role="img" aria-label="love" aria-labelledby="">
             ❤️

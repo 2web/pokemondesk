@@ -40,35 +40,35 @@ const Pokemon: FC<IProps> = ({ id }) => {
           </div>
           <div className={s.pokemonStats}>
             <div className={s.pokemonInfo}>
-              <Heading className={s.pokemonName} level="h3">
+              <Heading className={s.pokemonName} size="m">
                 {`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)}`}
               </Heading>
               <div className={s.pokemonGenAndCircle}>
-                <Heading className={s.pokemonGeneration} level="h4">
+                <Heading className={s.pokemonGeneration} size="s">
                   Generation 1
                 </Heading>
                 <div className={s.pokemonCircle}>
-                  <Heading level="h6" className={s.pokemonState}>
+                  <Heading size="xs" className={s.pokemonState}>
                     578
                   </Heading>
                 </div>
               </div>
             </div>
             <div className={s.pokemonAbilitiesText}>
-              <Heading level="h6" className={s.pokemonState}>
+              <Heading size="xs" className={s.pokemonState}>
                 Abilities
               </Heading>
-              <Heading level="h6" className={s.pokemonStateText}>
+              <Heading size="xs" className={s.pokemonStateText}>
                 Overgrow - Chlorophyll
               </Heading>
             </div>
             <div className={s.pokemonHealthAndExp}>
               <div className={s.pokemonHealth}>
-                <Heading level="h6" className={s.pokemonState}>
+                <Heading size="xs" className={s.pokemonState}>
                   Healthy Points
                 </Heading>
 
-                <Heading level="h6" className={s.pokemonNums}>
+                <Heading size="xs" className={s.pokemonNums}>
                   1 000 000
                 </Heading>
                 <div className={s.pokemonProgressBar}>
@@ -82,11 +82,11 @@ const Pokemon: FC<IProps> = ({ id }) => {
                 </div>
               </div>
               <div className={s.pokemonExp}>
-                <Heading level="h6" className={s.pokemonState}>
+                <Heading size="xs" className={s.pokemonState}>
                   Experience
                 </Heading>
 
-                <Heading level="h6" className={s.pokemonNums}>
+                <Heading size="xs" className={s.pokemonNums}>
                   1 000 000
                 </Heading>
                 <div className={s.pokemonProgressBar}>

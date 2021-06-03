@@ -12,10 +12,10 @@ const HomePage: React.FC = () => {
     <div className={s.root}>
       <Layout className={s.contentWrap}>
         <div className={s.contentText}>
-          <Heading level="h1">
+          <Heading size="xl">
             <b>Find</b> all your favorite <b>Pokemon</b>
           </Heading>
-          <Heading level="h3">You can know the type of Pokemon, its strengths, disadvantages and abilities</Heading>
+          <Heading size="m">You can know the type of Pokemon, its strengths, disadvantages and abilities</Heading>
           <Button onClick={() => navigate(LinkEnum.POKEDEX)}>See pokemons</Button>
         </div>
         <div className={s.contentParallax}>

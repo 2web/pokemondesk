@@ -16,7 +16,7 @@ const PokemonCard: FC<IProps> = ({ name, attack, defense, types, img }) => {
   return (
     <li className={s.root}>
       <div className={s.infoWrap}>
-        <Heading level="h4" className={s.titleName}>
+        <Heading size="s" className={s.titleName}>
           {`${name[0].toUpperCase()}${name.slice(1)}`}
         </Heading>
         <div className={s.statWrap}>

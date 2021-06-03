@@ -37,7 +37,7 @@ const Pokedex = () => {
   return (
     <div className={s.root}>
       <div className={s.wrapper}>
-        <Heading level="h3">
+        <Heading size="m">
           {!isLoading && data && data.total} <b>Pokemons</b> for you to choose your favorite
         </Heading>
         <input
