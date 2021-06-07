@@ -1,29 +1,18 @@
 import React from 'react';
-import Heading from '../../components/Heading';
-import Layout from '../../components/Layout';
-import Parallax from '../../components/Parallax';
-
 import s from './Empty.module.scss';
 
-interface IEmptyPageProps {
-    title?: string;
+interface EmptyPageProps {
+  title?: string
 }
 
-const EmptyPage: React.FC<IEmptyPageProps> = ({ title }) => {
-    return (
-        <div className={s.root}>
-            <Layout className={s.contentWrap}>
-                <div className={s.contentText}>
-                    <Heading tag="h1">
-                        <span>This is empty page for {title}!</span>
-                    </Heading>
-                </div>
-                <div className={s.contentParallax}>
-                    <Parallax />
-                </div>
-            </Layout>
-        </div>
-    );
-};
+const EmptyPage: React.FC<EmptyPageProps> = ({ title }) => {
+  return (
+    <div>
+      <div className={s.root}>
+        This is Empty page for {title}!
+      </div>
+    </div>
+  );
+}; 
 
 export default EmptyPage;

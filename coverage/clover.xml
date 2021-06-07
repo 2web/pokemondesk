@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1622700407795" clover="3.2.0">
+  <project timestamp="1622700407795" name="All files">
+    <metrics statements="30" coveredstatements="30" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4" elements="42" coveredelements="41" complexity="0" loc="30" ncloc="30" packages="3" files="4" classes="4"/>
+    <package name="components.Heading">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="E:\Projects\pokedesk\src\components\Heading\index.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="23" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="config">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="E:\Projects\pokedesk\src\config\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="getUrlWithParamsConfig.ts" path="E:\Projects\pokedesk\src\utils\getUrlWithParamsConfig.ts">
+        <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="38" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="6" type="stmt"/>
+        <line num="50" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+      </file>
+      <file name="toCapitalizeFirstLetter.ts" path="E:\Projects\pokedesk\src\utils\toCapitalizeFirstLetter.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

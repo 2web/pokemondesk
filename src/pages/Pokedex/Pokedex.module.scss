@@ -1,27 +1,52 @@
 @import '../../variables';
 
 .root {
-    min-height: 100vh;
-    background: linear-gradient(180deg, #ffffff 30.32%, #f5f5f5 100%);
+  background: linear-gradient(180deg, #ffffff 30.32%, #f5f5f5 100%);
+  flex: 2 1 auto;
 }
 
-.contentWrap {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-}
-.contentText {
-    display: flex;
-    flex-direction: column;
+.wrapper {
+  margin-top: 60px;
 
-    & > div {
-        margin-bottom: 15px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.contentGallery {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.pokemonInput {
+  background: #f2f2f2;
+  width: 100%;
+  max-width: 1100px;
+  height: 50px;
+  border: 0;
+  border-radius: 40px;
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+  padding: 0 30px;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  color: #4b4b4b;
+  outline: none;
+
+  margin-bottom: 70px;
+  margin-top: 30px;
+
+  &:focus {
+    border: 1px solid $third;
+  }
+}
+
+.pokemonCards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 150px;
+  max-width: 1500px;
+}
+
+.polemonLink {
+  text-decoration: none;
+  color: black;
 }

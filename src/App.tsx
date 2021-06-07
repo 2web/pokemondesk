@@ -1,18 +1,17 @@
-import React from 'react';
 import { useRoutes } from 'hookrouter';
-
-import routes from './routes';
-import NotFoundPage from './pages/NotFound';
+import React from 'react';
+import Footer from './components/Footer';
 import Header from './components/Header';
-// import s from './App.module.scss';
+import NotFoundPage from './pages/NotFound';
+import routes from './routes';
 
-
-const App = () => {
+const App: React.FC = () => {
   const match = useRoutes(routes);
   return match ? (
     <>
       <Header />
       {match}
+      <Footer />
     </>
   ) : (
     <NotFoundPage />

@@ -1,10 +1,10 @@
-import React from 'react';
-import { IPokemon } from '../../pokemon';
-import Heading from '../Heading';
+import React, { FC } from 'react';
+
+import Heading from '../Heading/index';
 
 import s from './PokemonCard.module.scss';
 
-interface IPokemonCard {
+interface IProps {
   name: string;
   attack: number;
   defense: number;
@@ -12,34 +12,36 @@ interface IPokemonCard {
   img: string;
 }
 
-const PokemonCard: React.FC<IPokemonCard> = ({ name, attack, defense, types, img }) => {
-    return (
-        <div className={s.root}>
-            <div className={s.infoWrap}>
-                <Heading tag="h2">
-                    {`${name[0].toUpperCase()}${name.slice(1)}`}
-                </Heading>
-                <div className={s.statWrap}>
-                    <div className={s.statItem}>
-                        <div className={s.statValue}>{attack}</div>
-                        Attack
-                    </div>
-                    <div className={s.statItem}>
-                        <div className={s.statValue}>{defense}</div>
-                        Defense
-                    </div>
-                </div>
-                <div className={s.labelWrap}>
-                    {types.map((type) => (
-                        <span className={s.label}>{type}</span>
-                    ))}
-                </div>
-            </div>
-            <div className={s.pictureWrap}>
-                <img src={img} alt={name} />
-            </div>
+const PokemonCard: FC<IProps> = ({ name, attack, defense, types, img }) => {
+  return (
+    <li className={s.root}>
+      <div className={s.infoWrap}>
+        <Heading size="s" className={s.titleName}>
+          {`${name[0].toUpperCase()}${name.slice(1)}`}
+        </Heading>
+        <div className={s.statWrap}>
+          <div className={s.statItem}>
+            <div className={s.statValue}>{attack}</div>
+            Attack
+          </div>
+          <div className={s.statItem}>
+            <div className={s.statValue}>{defense}</div>
+            Defense
+          </div>
         </div>
-    );
+        <div className={s.labelWrap}>
+          {types.map((type) => (
+            <span key={type} className={s.label}>
+              {type}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className={s.pictureWrap}>
+        <img src={img} alt={name} />
+      </div>
+    </li>
+  );
 };
 
 export default PokemonCard;

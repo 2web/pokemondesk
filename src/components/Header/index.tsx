@@ -1,41 +1,33 @@
-import React, { memo } from 'react';
 import cn from 'classnames';
 import { A, usePath } from 'hookrouter';
+import React from 'react';
 import { GENERAL_MENU } from '../../routes';
-
+import { ReactComponent as PokemonLogoSvg } from './assets/Logo.svg';
 import s from './Header.module.scss';
 
-import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
-
-// interface IMenu {
-//   id: number;
-//   value: string;
-//   link: string;
-// }
-
-const Header = () => {
+const Header: React.FC = () => {
   const path = usePath();
-    return (
-        <div className={s.root}>
-            <div className={s.wrap}>
-                <div className={s.pokemonLogo}>
-                    <PokemonLogo />
-                </div>
-            </div>
-            <div className={s.menuWrap}>
-                {GENERAL_MENU.map(({ title, link }) => (
-                    <A
-                        key={title}
-                        href={link}
-                        className={cn(s.menuLink, {
-                            [s.activeLink]: link === path,
-                        })}>
-                        {title}
-                    </A>
-                ))}
-            </div>
+  return (
+    <div className={s.root}>
+      <div className={s.wrap}>
+        <div className={s.pockemonLogo}>
+          <PokemonLogoSvg />
         </div>
-    );
+        <div className={s.menuWrap}>
+          {GENERAL_MENU.map(({ link, title }) => (
+            <A
+              key={title}
+              href={link}
+              className={cn(s.menuLink, {
+                [s.activeLink]: link === path,
+              })}>
+              {title}
+            </A>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default memo(Header);
+export default React.memo(Header);
