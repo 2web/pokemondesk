@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
 /* eslint-disable camelcase */
 export interface IAccMenu {
@@ -57,3 +57,11 @@ export interface IPokemonsData {
     total: number;
     pokemons: IPokemon[];
 }
+
+export interface IStateRequest<T> {
+    isLoading: boolean;
+    data: null | T[];
+    error: null | object;
+}
+
+export type ITypesRequest = string[];
